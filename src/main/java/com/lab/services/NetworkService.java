@@ -6,21 +6,15 @@ import java.util.logging.Logger;
 public class NetworkService {
     private static final Logger LOGGER = Logger.getLogger(NetworkService.class.getName());
 
-    public NetworkService() {
-        LOGGER.info("NetworkService cargado.");
-    }
-
     public void executeNetworkCheck(String targetIp) {
-        String cmd = "ping -c 3 " + targetIp;
-        LOGGER.info("Diagnóstico de red: " + cmd);
+        // S-04 FIX: Usar ProcessBuilder separando comando y argumentos para evitar Inyección
         try {
-            Process process = Runtime.getRuntime().exec(cmd);
+            ProcessBuilder pb = new ProcessBuilder("ping", "-c", "3", targetIp);
+            Process process = pb.start();
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
+            while (reader.readLine() != null) {}
             process.waitFor();
+            LOGGER.info("Diagnóstico de red seguro ejecutado.");
         } catch (Exception e) {
             LOGGER.severe("Fallo de sistema: " + e.getMessage());
         }
