@@ -28,6 +28,13 @@ jobs:
 
       - name: Ejecutar SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
+        with:
+          args: >
+            -Dsonar.projectKey=DevSecOps_Lab04-FDSI
+            -Dsonar.organization=juanesgl
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.sources=src/main/java
+            -Dsonar.java.binaries=target/classes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
