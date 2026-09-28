@@ -1,4 +1,4 @@
-﻿package com.lab.services;
+package com.lab.services;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

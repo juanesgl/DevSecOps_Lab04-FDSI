@@ -1,4 +1,4 @@
-﻿package com.lab.services;
+package com.lab.services;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

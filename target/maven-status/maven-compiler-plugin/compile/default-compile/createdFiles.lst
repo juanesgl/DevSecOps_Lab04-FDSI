@@ -1,0 +1,5 @@
+com\lab\services\NetworkService.class
+com\lab\services\DatabaseService.class
+com\lab\App.class
+com\lab\services\FileService.class
+com\lab\services\AuthService.class

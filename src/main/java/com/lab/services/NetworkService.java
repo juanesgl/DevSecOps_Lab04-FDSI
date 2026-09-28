@@ -1,4 +1,4 @@
-﻿package com.lab.services;
+package com.lab.services;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.logging.Logger;
