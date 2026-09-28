@@ -10,10 +10,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+    <!-- S-06 FIX: Actualizar log4j a versión parcheada 2.17.1 -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
-      <version>2.14.1</version> 
+      <version>2.17.1</version> 
     </dependency>
   </dependencies>
 </project>
